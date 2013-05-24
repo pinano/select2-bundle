@@ -1,5 +1,5 @@
 {
-    "name": "pinnano/select2-bundle",
+    "name": "pinano/select2-bundle",
     "type": "symfony-bundle",
     "description": "jQuery Select2 bundle for use with Symfony2",
     "keywords": ["jquery", "select2", "bundle"],
