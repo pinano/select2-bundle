@@ -1,0 +1,25 @@
+{
+    "name": "pinnano/select2-bundle",
+    "type": "symfony-bundle",
+    "description": "jQuery Select2 bundle for use with Symfony2",
+    "keywords": ["jquery", "select2", "bundle"],
+    "homepage": "http://github.com/pinano/select2-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fernando Arroyo",
+            "email": "farroyo@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2"
+    },
+    "require-dev": {
+        "symfony/framework-bundle": ">=2.0.*"
+    },
+    "autoload": {
+        "psr-0": { "Pinano\\Select2Bundle": "" }
+    },
+    "minimum-stability": "dev",
+    "target-dir": "Pinano/Select2Bundle"
+}

@@ -1,0 +1,6 @@
+# SO specific ------------------
+.DS_Store
+Thumbs.db
+
+# .gitkeep ---------------------
+!.gitkeep
