@@ -15,7 +15,7 @@
         "php": ">=5.3.2"
     },
     "require-dev": {
-        "symfony/framework-bundle": ">=2.0.*"
+        "symfony/framework-bundle": "2.*"
     },
     "autoload": {
         "psr-0": { "Pinano\\Select2Bundle": "" }
