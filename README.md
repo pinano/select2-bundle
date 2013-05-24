@@ -19,6 +19,19 @@ Select2 3.4.0 (73)
 }
 ```
 
+### Or, if you prefer, choose a specific version
+
+``` js
+// composer.json
+
+{
+    "require": {
+        // ...
+        "pinano/select2-bundle": "3.4.0"
+    }
+}
+```
+
 ### Add bundle to your application kernel
 
 ``` php
