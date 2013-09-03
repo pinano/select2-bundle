@@ -2,7 +2,7 @@
 
 ## Current Version
 
-Select2 3.4.0 (73)
+Select2 3.4.2 (31)
 
 ## Installation
 
@@ -27,7 +27,7 @@ Select2 3.4.0 (73)
 {
     "require": {
         // ...
-        "pinano/select2-bundle": "3.4.0"
+        "pinano/select2-bundle": "3.4.2"
     }
 }
 ```
@@ -71,12 +71,15 @@ Notes: All the urls of the original routes have been changed to '../images/*' du
 
 ## Usage
 
-Once you have imported all the resources to the vendor folder, you can self-import the JS into your Symfony project as usual with:
+Once all the resources are in place you can edit any of your twig views or layouts to include the Select2
+javascript files.
+
+Note: Select2 requires jQuery library.
 
 ``` twig
-{# block js #}
 {% block javascripts %}
-    {% javascripts filter='cssrewrite' output='js/base.js'
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    {% javascripts
         ...
         '@PinanoSelect2Bundle/Resources/public/js/select2.min.js'
         '@PinanoSelect2Bundle/Resources/public/js/select2_locale_XX.js'
@@ -87,25 +90,35 @@ Once you have imported all the resources to the vendor folder, you can self-impo
 {% endblock %}
 ```
 
-And with the CSS as well using with:
-``` twig
+Then you will want to load the css resources so your select elements look nice:
 
-{# block css #}
+``` twig
 {% block stylesheets %}
-    {% stylesheets filter='cssrewrite' output='css/base.css'
-        ...
-        'bundles/pinanoselect2/css/select2.css'
-        ...
-        %}
-        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}" />
+    {% stylesheets filter='cssrewrite'
+      ...
+      'bundles/pinanoselect2/css/select2.css'
+      ...
+    %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
     {% endstylesheets %}
 {% endblock %}
 ```
+
 Note: See https://github.com/kriswallsmith/assetic/issues/53 for known limitations of assetic with CSS referencing.
+
+I usually follow a simple inheritance schema when it comes to designing twig templates. That is, I have an
+app/Resources/views/base.html.twig file that I use as a site-wide template. Then, inside every bundle I have
+my own Resources/views/layout.html.twig file that extends the base template. Depending on the kind of application
+I'm designing I can place the Bootstrap stuff in the site-wide or the bundle-wide template. Then every view of a
+given bundle will extend the corresponding bundle layout.html.twig file, which in turn extends the site-wide template.
+
+The folks at Sensio Labs have already covered this approach and you can check it in their
+[documentation](http://twig.sensiolabs.org/doc/templates.html#template-inheritance).
 
 ## Licenses
 
-I do not own Select2 files at all, I'm just providing a Bundle package to easy-install them all. Refer to the source code of the included files from Select2 for license information.
+I do not own Select2 files at all, I'm just providing a Bundle package to easy-install them all.
+Refer to the source code of the included files from Select2 for license information.
 
 ## References
 
