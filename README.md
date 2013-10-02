@@ -2,7 +2,7 @@
 
 ## Current Version
 
-Select2 3.4.2 (31)
+[Select2 3.4.3 (17)](http://ivaynberg.github.io/select2/)
 
 ## Installation
 
@@ -27,7 +27,7 @@ Select2 3.4.2 (31)
 {
     "require": {
         // ...
-        "pinano/select2-bundle": "3.4.2"
+        "pinano/select2-bundle": "3.4.3"
     }
 }
 ```
