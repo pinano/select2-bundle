@@ -2,7 +2,7 @@
 
 ## Current Version
 
-Select2 3.4.3-1 (31)
+[Select2 3.4.3 (17)](http://ivaynberg.github.io/select2/)
 
 ## Installation
 
