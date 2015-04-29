@@ -2,7 +2,7 @@
 
 ## Current Version
 
-[Select2 3.5.2 (7)](http://ivaynberg.github.io/select2/)
+[Select2 4.0](https://select2.github.io/)
 
 ## Installation
 
@@ -27,7 +27,7 @@
 {
     "require": {
         // ...
-        "pinano/select2-bundle": "3.5.2"
+        "pinano/select2-bundle": "4.0"
     }
 }
 ```
@@ -67,22 +67,23 @@ Optionally, use the --symlink attribute to create links rather than copies of th
 $ php app/console assets:install --symlink web
 ```
 
-Notes: All the urls of the original routes have been changed to '../images/*' due to Bundle package requirements.
-
 ## Usage
 
 Once all the resources are in place you can edit any of your twig views or layouts to include the Select2
 javascript files.
 
-Note: Select2 requires jQuery library.
+Select2 optionally supports multiple languages by simply including the right language javascript file 
+(`i18n/es.js`, `i18n/fr.js`, etc.) after `select2.js`. In the following example we are loading the Spanish locale.
+
+Note: Select2 requires the jQuery library.
 
 ``` twig
 {% block javascripts %}
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     {% javascripts
         ...
         '@PinanoSelect2Bundle/Resources/public/js/select2.min.js'
-        '@PinanoSelect2Bundle/Resources/public/js/select2_locale_XX.js'
+        '@PinanoSelect2Bundle/Resources/public/js/i18n/es.js'
         ...
         %}
         <script src="{{ asset_url }}"></script>
@@ -122,5 +123,5 @@ Refer to the source code of the included files from Select2 for license informat
 
 ## References
 
-1. http://ivaynberg.github.io/select2/
+1. https://select2.github.io/
 2. http://symfony.com
