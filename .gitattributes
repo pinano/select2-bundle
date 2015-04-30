@@ -1,37 +1,3 @@
 # Tell git to detect all text files and automatically convert to LF
 * text eol=lf
 
-# These files are text and should be normalized (convert CRLF to LF)
-*.md            text
-*.sass          text
-*.scss          text
-*.sh            text
-*.sql           text
-*.svg           text
-*.wsdl          text
-*.xliff         text
-*.xsd           text
-
-# Files that should be treated as binary (binary is a macro for -text -diff)
-composer.lock   binary
-composer.phar   binary
-*.dds           binary
-*.doc           binary
-*.docx          binary
-*.eot           binary
-*.gif           binary
-*.ico           binary
-*.jar           binary
-*.jpeg          binary
-*.jpg           binary
-*.pdf           binary
-*.png           binary
-*.psd           binary
-*.rar           binary
-*.swc           binary
-*.swf           binary
-*.ttf           binary
-*.woff          binary
-*.xls           binary
-*.xlsx          binary
-*.zip           binary
