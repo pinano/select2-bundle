@@ -2,5 +2,11 @@
 .DS_Store
 Thumbs.db
 
+# ide files --------------------
+.buildpath
+.project
+.settings
+.idea
+
 # .gitkeep ---------------------
 !.gitkeep
