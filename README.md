@@ -2,7 +2,7 @@
 
 ## Current Version
 
-[Select2 4.0](https://select2.github.io/)
+[Select2 4.0.1](https://select2.github.io/)
 
 ## Installation
 
