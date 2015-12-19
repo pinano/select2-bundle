@@ -27,7 +27,7 @@
 {
     "require": {
         // ...
-        "pinano/select2-bundle": "4.0"
+        "pinano/select2-bundle": "4.0.1"
     }
 }
 ```
