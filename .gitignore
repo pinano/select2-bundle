@@ -10,3 +10,6 @@ Thumbs.db
 
 # .gitkeep ---------------------
 !.gitkeep
+
+# composer ---------------------
+composer.phar
